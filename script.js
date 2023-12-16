@@ -1,4 +1,3 @@
-
 let resultado;
 let resultadoF;
 let btnCalculo = document.getElementById('CALCULAR');
