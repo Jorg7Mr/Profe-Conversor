@@ -296,29 +296,4 @@ function convertirMm(unidad, unidad2, valor) {
 
 
 
-const apiUrl = 'https://favqs.com/api/qotd';
 
-function obtenerFraseMotivacional() {
-    const request = new XMLHttpRequest();
-    request.open('GET', apiUrl);
-    request.setRequestHeader('Authorization', 'Token token="TU_TOKEN_API"'); // Reemplaza con tu token de la API, si es necesario
-
-    request.onload = function() {
-        if (request.status === 200) {
-            const data = JSON.parse(request.responseText);
-            const frase = data.quote.body;
-            console.log(frase); // Aquí puedes hacer lo que desees con la frase obtenida
-        } else {
-            console.error('No se pudo obtener la frase motivacional');
-        }
-    };
-
-    request.onerror = function() {
-        console.error('Hubo un error en la solicitud');
-    };
-
-    request.send();
-}
-
-// Llamada a la función para obtener la frase motivacional
-obtenerFraseMotivacional();
